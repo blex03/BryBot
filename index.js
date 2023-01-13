@@ -20,7 +20,18 @@ client.on('messageCreate', (message) => {
     if (message.content.toLowerCase() === "hi bry bot") {
         message.reply(`hello ${message.author.username}`)
     }
-    console.log(message)
+    
+    else if(message.content.toLowerCase() === "flip a coin") {
+        const state = Math.floor(Math.random() * 2)
+        if (state === 1){
+            message.reply('Heads')
+        }
+        else {
+            message.reply('Tails')
+        }
+    }
+    
+
 })
 
 
